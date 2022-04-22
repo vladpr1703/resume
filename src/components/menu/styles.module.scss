@@ -1,0 +1,39 @@
+.menu {
+  margin-left: 20px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 120px;
+  background-color: #23262b;
+  border: 1px solid #383838;
+  border-radius: 8px;
+
+  .menu-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    padding: 10px 0;
+    width: 80%;
+    border: 1px solid #383838;
+    box-shadow: 5px -1px 15px 0px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    border-radius: 8px;
+    user-select: none;
+
+    &:hover {
+      color: blueviolet;
+      box-shadow: 5px -1px 15px 0px rgba(0, 0, 0, 0.6);
+      transition: 0.3s;
+    }
+
+    img {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 10px;
+    }
+  }
+}

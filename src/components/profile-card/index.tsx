@@ -1,7 +1,7 @@
 import styles from "./styles.module.scss";
 import Image from "../../images/image.png";
 
-export const ProfileCard = () => {
+export const ProfileCard = ({ setActiveCard }) => {
   return (
     <div className={styles["card-wrapper"]}>
       <div className={styles.image}>
@@ -19,7 +19,7 @@ export const ProfileCard = () => {
       </div>
       <div className={styles.buttons}>
         <button>DOWNLOAD CV</button>
-        <button>CONTACT ME</button>
+        <button onClick={() => setActiveCard("Contact")}>CONTACT ME</button>
       </div>
     </div>
   );

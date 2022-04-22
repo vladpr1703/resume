@@ -1,4 +1,5 @@
 .wrapper {
+  position: relative;
   width: 650px;
   height: 600px;
   background-color: #23262b;
@@ -7,5 +8,6 @@
 
   .content {
     padding: 15px;
+    height: 100%;
   }
 }

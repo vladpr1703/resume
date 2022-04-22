@@ -1,14 +1,11 @@
 .content {
-  .header {
-    position: relative;
+  position: relative;
+  .header-text {
+    text-align: left;
+    color: white;
 
-    .header-text {
-      text-align: left;
-      color: white;
-
-      span {
-        color: blueviolet;
-      }
+    span {
+      color: blueviolet;
     }
   }
 
@@ -25,33 +22,32 @@
     );
   }
 
-  .row {
-    display: flex;
-    flex-grow: 1;
-    position: relative;
+  .text {
+    color: #aeb0b8;
+    margin: 40px 0 50px;
+  }
 
-    .column {
-      width: 50%;
-      margin-top: 10px;
+  .contact {
+    width: 410px;
+    margin: 0 auto 40px;
 
-      span {
-        color: white;
-        font-size: 16px;
-        line-height: 30px;
-      }
+    .row {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
 
       .element {
         display: flex;
         align-items: center;
-        margin-left: 8px;
+        height: 25px;
         padding: 4px 10px;
-        border: 1px solid gainsboro;
+        border: 1px solid rgb(58, 58, 58);
         border-radius: 8px;
         margin-bottom: 10px;
         box-shadow: 5px -1px 15px 0px rgba(0, 0, 0, 0.3);
 
         i {
-          color: blueviolet;
+          color: #8a2be2;
           margin-right: 5px;
         }
 
@@ -64,26 +60,54 @@
 
         span {
           font-size: 14px;
+          color: #aeb0b8;
         }
       }
     }
+  }
 
-    &:first-child {
-      padding: 0 10px;
-    }
-
-    .column:first-child::after {
+  .services {
+    position: relative;
+    .header-text::after {
       content: "";
       position: absolute;
-      left: 50%;
-      top: 0;
-      width: 1px;
-      height: 95%;
+      left: -15px;
+      top: 50px;
+      width: 95%;
+      height: 1px;
       background: radial-gradient(
-        ellipse at top,
-        #b0b0b0 0%,
+        ellipse at left,
+        rgba(197, 202, 213, 0.7) 20%,
         rgba(255, 255, 255, 0) 70%
       );
+    }
+
+    .cards {
+      margin-top: 40px;
+      display: flex;
+      justify-content: space-around;
+
+      .card {
+        width: 35%;
+        border: 1px solid rgb(58, 58, 58);
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 20px;
+        box-shadow: 5px -1px 15px 0px rgba(0, 0, 0, 0.3);
+
+        img {
+          width: 40px;
+          height: 40px;
+          margin-bottom: 20px;
+          user-select: none;
+        }
+        span {
+          color: white;
+        }
+      }
     }
   }
 }
