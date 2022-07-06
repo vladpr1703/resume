@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { CSSTransition, SwitchTransition } from "react-transition-group";
 import { Menu } from "./menu";
-import { ActiveCard } from "./types";
+import { ActiveCard, ActiveCards } from "./types";
 import { Bg } from "./square-bg";
 import { ProfileCard } from "./profile-card";
 import { ContentCard } from "./content-card";
 import styles from "./styles.module.scss";
 
 export function App() {
-  const [activeCard, setActiveCard] = useState<ActiveCard>("About");
+  const [activeCard, setActiveCard] = useState<ActiveCard>(ActiveCards.About);
 
   return (
     <div className={styles.app}>

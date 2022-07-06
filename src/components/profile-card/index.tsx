@@ -1,5 +1,6 @@
-import styles from "./styles.module.scss";
 import Image from "../../images/image.png";
+import { ActiveCards } from "../types";
+import styles from "./styles.module.scss";
 
 export const ProfileCard = ({ setActiveCard }) => {
   return (
@@ -9,7 +10,7 @@ export const ProfileCard = ({ setActiveCard }) => {
       </div>
       <div className={styles["personal-info"]}>
         <p className={styles.text}>Vlad Prusakov</p>
-        <span>Frontend developer</span>
+        <span className={styles.bluviolet}>Frontend developer</span>
         <div className={styles.socials}>
           <i className="fa fa-twitter fa-lg" aria-hidden="true"></i>
           <i className="fa fa-telegram fa-lg" aria-hidden="true"></i>
@@ -19,7 +20,9 @@ export const ProfileCard = ({ setActiveCard }) => {
       </div>
       <div className={styles.buttons}>
         <button>DOWNLOAD CV</button>
-        <button onClick={() => setActiveCard("Contact")}>CONTACT ME</button>
+        <button onClick={() => setActiveCard(ActiveCards.Contact)}>
+          CONTACT ME
+        </button>
       </div>
     </div>
   );

@@ -1,0 +1,29 @@
+.wrapper {
+  position: relative;
+
+  .header-text {
+    text-align: left;
+    color: white;
+  }
+
+  .header-text::after {
+    content: "";
+    position: absolute;
+    top: 50px;
+    left: -15px;
+    width: 95%;
+    height: 1px;
+    background: radial-gradient(
+      ellipse at left,
+      rgba(197, 202, 213, 0.7) 20%,
+      rgba(255, 255, 255, 0) 70%
+    );
+  }
+
+  .content {
+    padding: 20px 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
